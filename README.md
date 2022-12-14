@@ -1,28 +1,35 @@
 # Decentralized-File-sharing-network
 
-A central server (in this case firebase server) controls / manages the operations.
+Synerzy:
+ 
+I will be developing a peer to peer network based file sharing application(Android).
+It is inspired from torrents and decentralization of internet.
+ 
+ 
+High level Design:
+For each and every network(peer to peer network) there is a central server.
+The devices communicate with central server gets the meta data about other devices and communicate among themselves.
+If a device wants to download a file
+ It sends a request to central server.
+The central server responds with meta data file.
+ Based on the response, the transfer will be initiated.
+After the central server update the metafile of this file. Hence, the network will be grown.
 
-initially the central_list (files)  is empty , any device 'x' connected to the network can add file 'f' to the central_list
+Meta File:-  Each file will have a metafile of it at central server.
+Devices having this file will have the device ID.
+By retrieving the device ID we can know the locality of the file in the device.
+By having the meta file , with the help of socket programming the transfer can be Initiated and completed.
+ 
+Why device-ID?
+As IP addresses are assigned by DHCP service of ISP, they may change every time.        
 
-    By adding file we mean the central server gets notified that this device 'x' is ready/ willing to share this file 'f'.
+Schema:- FID, metafile.txt
+ 
+ 
+Features/Functionalities:-
+I will be adding the functionalities of upload, download and search for files in the network.
+The files are listed on a common list(central-list).
+If an user want to upload the file using upload functionalities, the filename will be added to the central list.
+Search for a file basically searches for the matching file using file name and search query.
+Other functionalities include media player(audio and video).
 
-
-- after opening the application the user is presented with a list of files available in the network in a card view format.
-
-- Each card view has option to download this specific file , upon clicking on it starts the process of downloading indicating with a progress bar.
-
-- there is a search bar to search for required files in the central_list/network using name of the file.
-
-
-## So After pressing the download button,  how is the process of transfer is done? 
-
-High level process is shown in these three pictures 
-
-                                request to central server
-![request_to_central_server](https://github.com/khalil192/synerzy-complete/blob/master/images/request_to_central_server.png)
-
-                                actual file request transfer part
-![actual_file_request_transfer_part](https://github.com/khalil192/synerzy-complete/blob/master/images/actual_file_request_transfer_part.png)
-
-                                acknowledgement and update part
-![acknowledgement_and_update_part](https://github.com/khalil192/synerzy-complete/blob/master/images/acknowledgement_and_update_part.png)
