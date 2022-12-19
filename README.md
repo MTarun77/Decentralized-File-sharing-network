@@ -34,7 +34,7 @@ Search for a file basically searches for the matching file using file name and s
 Other functionalities include media player(audio and video).
 
 #How to run:
-Load the project into android studio
-Establish the firebase connec tion
-Run the application in Two different android devices
+Load the project into android studio. 
+Establish the firebase connec tion. 
+Run the application in Two different android devices. 
 Now you will be able to upload or download the files that are mutually accepted.
