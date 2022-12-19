@@ -37,4 +37,4 @@ Other functionalities include media player(audio and video).
 Load the project into android studio. 
 Establish the firebase connec tion. 
 Run the application in Two different android devices. 
-Now you will be able to upload or download the files that are mutually accepted.
+Now you will be able to upload or download the files that are mutually accepted. 
